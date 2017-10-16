@@ -1,10 +1,8 @@
-# js-cardio (Test 1)
+# js-cardio (Test 2)
 
-Write a function ***f1*** that accepts two strings, ***a*** and ***b***, as parameters and returns the number of character deletions required to make ***a*** and ***b*** contain the same exact letters in the same exact frequency.
+Write a function ***f2*** that accepts two arrays of strings, ***a*** and ***b***, as parameters and returns an array, containing for each string in ***b***, how many times it occurs in ***a***
 
-Examples:
+Example:
 
- - f1('bacdc', 'dcbac') returns 0
-	- the strings have the same exact letters in the same exact frequency, no deletions needed
- - f1('bacdc', 'dcbad') returns 2
-	 - we have to remove one ‘c’ from ***a*** and one ‘d’ from ***b***
+ - f2([‘aba’, ‘baba’, ‘aba’, ‘xzxb’], [‘aba’, ‘xzxb’, ‘ab’]) returns [2, 1, 0]
+	 - ‘aba’ occurs twice, in the first and third string, ‘xzxb’ occurs once in the fourth string, and ‘ab’ does not occur at all
