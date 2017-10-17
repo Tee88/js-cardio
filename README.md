@@ -1,14 +1,10 @@
-# js-cardio (Test 3)
+# js-cardio (Test 4)
 
-A hostname is composed of one or more parts separated by a dot, where every part contains one or more of the following characters: characters from ‘A’ to ‘Z’ (case insensitive), numbers, dashes (‘-’) and underlines (‘_’). Write a function ***f3*** that accepts a string, ***a***, as parameter and returns 0 if ***a*** is not a valid hostname and the number of parts it contains otherwise.
+Write a function ***f4*** that accepts a callback function, ***cb***, as parameter and that calls this callback function only if ***f4*** itself has not been called again during 300 milliseconds.
 
-Examples:
+Example:
 
- - f3(‘’) returns 0
-	 - Does not contain any parts
- - f3(‘xtech.guru’) returns 2
-	 - Is valid and has 2 parts: ‘xtech’ and ‘guru’
- - f3(‘@xtech.guru’) returns 0
-	 - Has invalid characters, so it’s invalid
-
-**Note:** the hostname format given is not correct and is only used to make the test easier.
+ - f4(cb), 100 milliseconds elapsed, f4(cb), 200 milliseconds elapsed, f4(cb): ***cb*** is called only once
+	 - The second call happens before 300 milliseconds are elapsed, so ***cb*** is not called and ***f4*** will wait for another 300 milliseconds
+	 - The third call happens before 300 milliseconds are elapsed, so ***cb*** is not called and ***f4*** will wait for another 300 milliseconds
+	 - ***f4*** is not called for more than 300 milliseconds after the third call, so ***cb*** is called
