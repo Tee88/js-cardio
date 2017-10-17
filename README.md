@@ -1,8 +1,14 @@
-# js-cardio (Test 2)
+# js-cardio (Test 3)
 
-Write a function ***f2*** that accepts two arrays of strings, ***a*** and ***b***, as parameters and returns an array, containing for each string in ***b***, how many times it occurs in ***a***
+A hostname is composed of one or more parts separated by a dot, where every part contains one or more of the following characters: characters from ‘A’ to ‘Z’ (case insensitive), numbers, dashes (‘-’) and underlines (‘_’). Write a function ***f3*** that accepts a string, ***a***, as parameter and returns 0 if ***a*** is not a valid hostname and the number of parts it contains otherwise.
 
-Example:
+Examples:
 
- - f2([‘aba’, ‘baba’, ‘aba’, ‘xzxb’], [‘aba’, ‘xzxb’, ‘ab’]) returns [2, 1, 0]
-	 - ‘aba’ occurs twice, in the first and third string, ‘xzxb’ occurs once in the fourth string, and ‘ab’ does not occur at all
+ - f3(‘’) returns 0
+	 - Does not contain any parts
+ - f3(‘xtech.guru’) returns 2
+	 - Is valid and has 2 parts: ‘xtech’ and ‘guru’
+ - f3(‘@xtech.guru’) returns 0
+	 - Has invalid characters, so it’s invalid
+
+**Note:** the hostname format given is not correct and is only used to make the test easier.
